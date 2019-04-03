@@ -4,10 +4,10 @@ from todo import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index, name='index'),
-    path('all/', views.all_tasks, name='all_tasks'),
-    path('new/', views.new_task, name='new_task'),
-    path('update/', views.update_task, name='update_task'),
-    path('delete/', views.delete_task, name='delete_task'),
-    path('signin/', views.signin, name='signin'),
+    path('', views.api_index, name='api_index'),
+    path('all/', views.api_all_tasks, name='api_all_tasks'),
+    path('new/', views.api_new_task, name='api_new_task'),
+    path('update/', views.api_update_task, name='api_update_task'),
+    path('delete/', views.api_delete_task, name='api_delete_task'),
+    path('signin/', views.api_signin, name='api_signin'),
 ]
