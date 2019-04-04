@@ -8,7 +8,7 @@ def define_usage(params=None, returns=None):
         cls = function.view_class
         header = None
         # Is authentication required to access this view?
-        if any(IsAuthenticated for cls in cls.permission_classes):
+        if IsAuthenticated in cls.permission_classes:
             header = {'Authorization': 'Token String'}
         # Build a list of the valid methods, but take out 'OPTIONS'
         methods = [method.upper() for method in cls.http_method_names if method != 'options']
