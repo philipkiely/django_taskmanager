@@ -61,7 +61,7 @@ def api_all_tasks(request):
 #URL /new/
 @define_usage(params={'description': 'String', 'due_in': 'Int'},
               returns={'done': 'Bool'})
-@api_view(['PUT'])
+@api_view(['POST'])
 @authentication_classes((SessionAuthentication, BasicAuthentication, TokenAuthentication))
 @permission_classes((IsAuthenticated,))
 def api_new_task(request):
